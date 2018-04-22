@@ -2,11 +2,11 @@
 - name: create file
   template:
     src: script.sh
-    dest: "/etc/profile.d/{{ dest }}"
+    dest: "{{ profile_path }}/{{ dest }}"
 
 - name: add environment variables
   lineinfile:
-    dest: "/etc/profile.d/{{ name }}"
+    dest: "{{ profile_path }}/{{ name }}"
     line: "export {{ item.name }}=\"{{ item.value }}\""
   with_items:
     - {name: 'test', value: 'example'}
