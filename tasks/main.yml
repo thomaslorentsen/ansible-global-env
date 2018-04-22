@@ -1,9 +1,4 @@
 ---
-- name: create profile
-  file:
-    path: /etc/profile.d
-    state: directory
-
 - name: create file
   template:
     src: script.sh

@@ -1,5 +1,15 @@
 ---
 - hosts: localhost
   remote_user: root
+  tasks:
+    - name: create profile
+      file:
+        path: /etc/profile.d
+        state: directory
+        mode: "a+rwx,o+rwx,g+rwx"
+
+- hosts: localhost
+  remote_user: root
   roles:
     - {name: ansible-global-env, dest: example}
+...
