@@ -32,5 +32,5 @@ script:
   # Run the role
   - ansible-playbook -i tests/inventory tests/test.yml --connection=local
 
-  - cat test
+  - cat example
 ...
