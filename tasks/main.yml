@@ -1,0 +1,13 @@
+---
+- name: create file
+  file:
+    path: "/etc/profile.d/{{ dest }}"
+    state: touch
+
+- name: add environment variables
+  lineinfile:
+    dest: "/etc/profile.d/{{ name }}"
+    line: "export {{ item.name }}=\"{{ item.value }}\""
+  with_items:
+    - {name: 'test', value: 'example'}
+...

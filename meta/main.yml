@@ -1,0 +1,16 @@
+galaxy_info:
+  author: Thomas Lorentsen
+  description: Configures Global Environment Variables
+  company: RoundPartner
+  license: BSD
+  min_ansible_version: 1.2
+
+  platforms:
+    - name: Debian
+      versions:
+        - all
+
+  galaxy_tags: [bash]
+
+
+dependencies: []
