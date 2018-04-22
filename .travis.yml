@@ -31,6 +31,6 @@ script:
   - ansible-playbook tests/test.yml -i tests/inventory --syntax-check --list-tasks
   # Run the role
   - ansible-playbook -i tests/inventory tests/test.yml --connection=local
-  - ls -l
-  - cat example
+  - ls -l tests
+  - cat tests/example
 ...
