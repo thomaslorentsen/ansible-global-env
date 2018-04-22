@@ -2,5 +2,6 @@
 - name: create file
   template:
     src: script.sh
-    dest: "{{ profile_path }}/{{ dest }}"
+    dest: "{{ profile_path }}/{{ dest }}.sh"
+    mode: "u+x"
 ...
