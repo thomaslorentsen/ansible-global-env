@@ -1,3 +1,4 @@
 ---
 profile_path: /etc/profile.d
+environment_variables: []
 ...

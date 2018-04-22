@@ -8,6 +8,6 @@
   lineinfile:
     dest: "{{ profile_path }}/{{ item.name }}"
     line: "export {{ item.name }}=\"{{ item.value }}\""
-  with_items:
+  with_items: "{{ environment_variables }}"
     - {name: 'test', value: 'example'}
 ...

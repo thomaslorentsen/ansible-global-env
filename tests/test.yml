@@ -1,6 +1,9 @@
 ---
 - hosts: localhost
   remote_user: root
+  vars:
+    example:
+      - {name: 'test', value: 'example'}
   roles:
-    - {name: ansible-global-env, dest: example, profile_path: .}
+    - {name: ansible-global-env, dest: example, profile_path: ., environment_variables: "{{ example }}"}
 ...
