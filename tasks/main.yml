@@ -1,8 +1,8 @@
 ---
 - name: create file
-  file:
-    path: "/etc/profile.d/{{ dest }}"
-    state: touch
+  template:
+    src: script.sh
+    dest: "/etc/profile.d/{{ dest }}"
 
 - name: add environment variables
   lineinfile:
